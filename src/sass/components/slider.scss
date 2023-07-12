@@ -1,0 +1,125 @@
+.sliderFon {
+  display: flex;
+  width: 100%;  
+  height: auto;
+  position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+}
+.sliderContent {
+  display: flex;
+  width: 1600px;
+  margin: 0 auto;
+  height: auto;
+  z-index: 0;
+
+}
+.slider {
+  position: relative;
+  width: 40%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+}
+
+.slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.left-block {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+      h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: $colorTextWhite;
+      }
+      p {
+        color: $colorTextWhite;
+        line-height: 1.5;
+      }
+        .slideButton {
+            width: 100%;
+            max-width: 200px;
+            height: 50px;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: $colorTextWhite;
+            border-radius: 8px;
+        }
+        .slideButton:hover {
+          background-color: $colorFon;
+        }
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0 10px;
+  }
+  
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 75px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $colorTextWhite;
+    border-radius: 8px;  
+    background-color: none;
+  }
+  .prev:hover {
+    background-color: $colorFon;
+  }
+  .next:hover {
+    background-color: $colorFon;
+  }
+  .sliderContentRight {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 500px;
+  }
+  .sliderContentRight {
+    width: 900px;
+  }
+  .circle {
+    width: 200px;
+  }
+
+  

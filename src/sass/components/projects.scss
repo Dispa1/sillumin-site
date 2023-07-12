@@ -1,0 +1,66 @@
+.bodyProjects {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+        .projetcTitle {
+            color: $color-link;
+            width: 100%;
+            max-width: 60%;
+            margin: 0 auto;
+            font-size: 36px;
+            font-weight: 700;
+            position: relative;
+            padding: 20px;
+        }
+        .bodyTile {
+            width: 100%;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: repeat(4, 50%);
+            gap: 5px;
+            .tile {
+                display: flex;
+                width: 100%;
+                height: auto;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                animation: slide 35s linear infinite;
+                .imgBody {
+                    width: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .textBody {
+                    width: 50%;
+                    padding: 20px;
+                    img {
+                        width: 50px;
+                        margin-bottom: 10px;
+                    }
+                    h2 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: $color-link;
+                        left: 20px;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                }
+            } 
+        }
+        @keyframes slide {
+          0% {
+            transform: translate(0);
+          }
+          100% {
+            transform: translate(-200%);
+          }
+        }
+
+}

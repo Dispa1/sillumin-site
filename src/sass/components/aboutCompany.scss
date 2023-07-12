@@ -1,0 +1,54 @@
+.aboutCompany {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+}
+.aboutCompanyFon {
+    position: relative;
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fonLeft {
+    width: 100%;
+    height: 300px;
+}
+.fonRight {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+}
+.aboutCompanyContent {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    left: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        h2 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: $color-link;
+            font-weight: 700;
+        }
+        p {
+            line-height: 1.5;
+            color: $colorTextBlack;
+        }
+}

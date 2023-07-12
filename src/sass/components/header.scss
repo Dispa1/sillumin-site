@@ -1,0 +1,137 @@
+@import "../vars/vars.scss";
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 125px;
+}
+.headerTopBody {
+  width: 100%;
+}
+.headerTop {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1600px;
+  height: 50px;
+  padding: 10px;
+    .headerContacts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        .language {
+          display: flex;
+          width: 100px;
+          padding: 2px;
+          align-items: center;
+          justify-content: center;
+        }
+        img {
+          width: 20px;
+          margin: 0 10px;
+        }
+    }
+    .headerWidgetsTop {
+      display: flex;
+      align-items: center;
+      width: max-content;
+        a {
+          margin: 0 10px;
+          font-size: 12px;
+          color: $colorTextBlack;
+        }
+    }
+}
+.headerBottomBody {
+  width: 100%;
+  background-color: $colorFon;
+}
+.hederBottom {
+  margin: 0 auto;
+  width: 100%;  
+  max-width: 1600px;
+  height: 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    .logoConteaner {
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+        img {
+          width: 100%;
+          max-width: 250px;
+        }
+    }
+    .widgetsHeaderBottom {
+      display: flex;
+        .widgetsHeaderBottomRight {
+          font-size: 12px;
+          color: $colorTextWhite;
+          padding: 5px;
+          height: 75px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    }
+}
+.dropdown {
+
+}
+.dropdown-content-abautCompany {
+  display: none;
+  position: absolute;
+  background-color: $colorFon;
+  width: max-content;
+  z-index: 1;
+    a {
+      display: block;
+      padding: 5px;
+      color: $colorTextWhite;
+      font-size: 14px;
+    }
+    a:hover {
+      background-color: $color-link;
+    }
+}
+.dropdown:hover .dropdown-content-abautCompany {
+  display: block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $colorFon;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+    a {
+      display: block;
+      padding: 5px;
+      color: $colorTextWhite;
+      font-size: 14px;
+    }
+    a:hover {
+      background-color: $color-link;
+    }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .widgetsHeaderBottomRight {
+  background-color: $color-link;
+}
+.equipment {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.equipment-body {
+  padding: 10px;
+    h2 {
+      color: $color-link;
+      margin-bottom: 5px;
+    }
+}

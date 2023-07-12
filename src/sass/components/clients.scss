@@ -1,0 +1,58 @@
+.clientsBody {
+    width: 100%;
+    overflow: hidden;
+    .clientsTitle {
+        font-size: 32px;
+        font-weight: 600;
+        color: $color-link;
+        width: 60%;
+        margin: 10px auto;
+    }
+    .clientsChapter {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 60%;
+        margin: 0 auto;
+            .chapter {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                img {
+                    width: 100px;
+                    margin: 10px;
+                }
+                h2 {
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: $color-link;
+                    text-align: center;
+                }
+            }
+    }
+    .clients {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        .clientImgBody {
+            width: max-content;
+            height: max-content;
+            animation: slide 10s linear infinite;
+            img {
+                width: 150px;
+                margin: 20px;
+            }
+        }
+    }
+    @keyframes slide {
+        0% {
+          transform: translate(0);
+        }
+        100% {
+          transform: translate(-200%);
+        }
+      }
+
+}

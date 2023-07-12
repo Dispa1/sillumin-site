@@ -1,0 +1,35 @@
+@import "vars/vars.scss";
+
+* {margin: 0; 
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lucida Sans', Arial, sans-serif; 
+    font-size: 16px; 
+    line-height: 1;  
+}
+html, body {
+  line-height: 1;
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+  //background-color: #004A7C;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+ 
+  @import "components/*.scss";

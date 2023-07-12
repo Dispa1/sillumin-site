@@ -1,0 +1,13 @@
+.projectsMap {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    .projectsMapTitle {
+        font-size: 36px;
+        font-weight: 700;   
+        color: $color-link;
+    }
+    img {
+        width: 100%;
+    }
+}
