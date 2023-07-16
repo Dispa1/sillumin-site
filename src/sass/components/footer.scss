@@ -38,6 +38,20 @@ footer {
             pointer-events: none;
             z-index: 1;
             background-color: $colorFonFooter;
+                .footerLinkLeft {
+                    pointer-events: auto;
+                    width: max-content;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    padding: 5px;
+                    color: white;
+                    a {
+                        
+                    }
+                }
                 .footerLink {
                     pointer-events: auto;
                     width: max-content;
@@ -51,6 +65,10 @@ footer {
                     a {
                         
                     }
+                }
+                .footerLink:hover {
+                    background-color: $colorFon;
+                    border-radius: 5px;
                 }
         }
 }

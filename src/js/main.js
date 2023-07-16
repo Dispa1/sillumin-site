@@ -46,29 +46,62 @@ function stopAutoPlay() {
 
 
 async function getResponse() {
-  let response = await fetch('http://localhost:5001/news')
-  let content = await response.json()
-  let news = document.querySelector('.newsContent')
-  let key;
-  for (key in content) {
-    console.log(content[key])
-    news.innerHTML += `
-      <div class="news">
-            <div class="newsImg">
-            <img src="http://localhost:5001/${content[key].image}" alt="1" >
-            </div>
-            <div class="newsText effect-to-bottom">
-                <div class="h2Body">
-                <h2 class="newsName">${content[key].title}</h2>
-                </div>
-                <a href="#">
-                    <div class="aBody">
-                    Перейти
-                    </div>
-                    </a>
-            </div>
-    `
+  try {
+    const response = await fetch('http://localhost:5001/news');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    // Получаем данные в формате JSON из ответа сервера
+    const content = await response.json();
+    const newsContainer = document.querySelector('.newsContent');
+    newsContainer.innerHTML = ''; // Очищаем контейнер перед обновлением
+
+    const newsLimit = 3; // Ограничение на количество получаемых новостей
+    for (let i = 0; i < Math.min(content.length, newsLimit); i++) {
+      const news = content[i]; // Получаем текущую новость из массива
+      const newsDiv = document.createElement('div');
+      newsDiv.classList.add('news');
+
+      const newsImgDiv = document.createElement('div');
+      newsImgDiv.classList.add('newsImg');
+
+      // Создаем изображение и устанавливаем атрибуты src и alt
+      const img = document.createElement('img');
+      img.src = `http://localhost:5001/${encodeURIComponent(news.image)}`;
+      img.alt = "1";
+      newsImgDiv.appendChild(img);
+
+      const newsTextDiv = document.createElement('div');
+      newsTextDiv.classList.add('newsText', 'effect-to-bottom');
+
+      const h2BodyDiv = document.createElement('div');
+      h2BodyDiv.classList.add('h2Body');
+
+      // Создаем заголовок h2 и устанавливаем текст новости
+      const h2 = document.createElement('h2');
+      h2.classList.add('newsName');
+      h2.textContent = news.title;
+      h2BodyDiv.appendChild(h2);
+
+      const a = document.createElement('a');
+      a.href = "#";
+      a.classList.add('aBody');
+      a.textContent = "Перейти";
+
+      newsTextDiv.appendChild(h2BodyDiv);
+      newsTextDiv.appendChild(a);
+
+      newsDiv.appendChild(newsImgDiv);
+      newsDiv.appendChild(newsTextDiv);
+
+      newsContainer.appendChild(newsDiv); // Добавляем сформированную новость в контейнер
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error);
   }
 }
 
-getResponse()
+getResponse();
+
+
