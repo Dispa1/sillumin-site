@@ -1,0 +1,23 @@
+<div class="vakansiiBody">
+    
+</div>
+<script>
+    async function getResponse() {
+  let response = await fetch('http://localhost:5001/job-openings')
+  let content = await response.json()
+  let news = document.querySelector('.vakansiiBody')
+  let key;
+  for (key in content) {
+    console.log(content[key])
+    news.innerHTML += `
+    <div class="vakansia">
+        <h2>${content[key].name}</h2>
+        <p>${content[key].description}</p>
+    </div>
+    `
+  }
+}
+
+getResponse()
+
+</script>
